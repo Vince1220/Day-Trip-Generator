@@ -15,16 +15,31 @@ entertainments=['Arena Concert','Amphitheatre Concert','Arena Concert','Outdoor 
 daily_entertainment= random.choice (entertainments)
 
 print (daily_destination,daily_entertainment,daily_transportation,daily_restaurant)
-user_response=('yes')
-user_decline=('no')
-if user_response.lower() in user_response =='yes' :
-    input ('Are you satisfied with your trip? ')
-#code works after debugging I generate randomized choices from each list and prints are you satisfied#  
-if user_response.lower() in user_response=='yes' :
-    input ('Is your trip complete?')
-if user_response.lower() in user_response=='yes' :
- print (daily_destination,daily_entertainment,daily_transportation,daily_restaurant)
-#after yes input to questions console prints verified confirmed choices# 
-if user_decline.lower() =='no':
- input ('What feature would you like to change? Destinations?, Entertainments?, Transportations?,Restaurants?')
+user_confirm='yes'
+user_decline='no' 
+
+user_response=input('Are you satisfied with your trip?')
+if user_response==user_confirm:
+    user_response=input('Is your trip complete?')
+    if user_response==user_confirm:
+        print (daily_destination,daily_entertainment,daily_transportation,daily_restaurant)
+if user_response==user_decline:
+     user_response=input ('What feature would you like to change? Destinations?, Entertainments?, Transportations?,Restaurants?')
+     if user_response.lower()== 'destinations':
+       print(random.choice (destinations))
+     if user_response.lower()== 'restaurants':
+       print (random.choice (restaurants))
+     if user_response.lower()== 'transportations':
+      print (random.choice (transportations))
+      if user_response.lower()== 'entertainments':
+          print (random.choice (entertainments))
+          if user_response==user_confirm:
+             input('Iyour trip complete?')
+             if user_response==user_confirm:
+                print (daily_destination,daily_entertainment,daily_transportation,daily_restaurant)
+                #revision once I refreshed functions not complete
+
+
+    
+   
 
